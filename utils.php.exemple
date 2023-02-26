@@ -1,0 +1,15 @@
+<?php
+    try
+    {
+        $ipserver ="IPSERVER";
+        $nomBase = "DATABASE";
+        $loginPrivilege ="USER";
+        $passPrivilege ="PASSWORD";
+        $GLOBALS["pdo"] = new PDO('mysql:host='.$ipserver.';dbname='.$nomBase.";charset=utf8mb4",$loginPrivilege,$passPrivilege); 
+    }
+    catch(Exception $error)
+    {
+        $error->getMessage();
+        echo "Erreur est :".$error;
+    }
+?>
